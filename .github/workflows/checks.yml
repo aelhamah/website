@@ -23,5 +23,5 @@ jobs:
 
     - name: linkchecker
       run: |
-        sudo chmod -R o-w /usr/local/
-        sudo linkchecker --check-extern docs/
+        sudo chmod -R o-w /opt/
+        linkchecker --check-extern docs/
