@@ -2,8 +2,8 @@ on:
   push:
     
 jobs:
-  Validation:
-    name: p2-insta485-serverside
+  Validators:
+    name: Validators
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -23,4 +23,5 @@ jobs:
 
     - name: linkchecker
       run: |
-        linkchecker --check-extern docs/
+        sudo chmod -R o-w /usr/local/
+        sudo linkchecker --check-extern docs/
