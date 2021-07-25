@@ -1,0 +1,27 @@
+on:
+  push:
+    paths:
+      - 'docs/**'
+jobs:
+  Validation:
+    name: p2-insta485-serverside
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Python3
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install Dependecies
+      run: |
+        pip install html5validator linkchecker
+
+    - name: html5validator
+      run: |
+        html5validator --root docs/
+
+    - name: linkchecker
+      run: |
+        linkchecker --check-extern docs/
