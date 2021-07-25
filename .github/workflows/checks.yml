@@ -15,10 +15,12 @@ jobs:
 
     - name: Install Dependecies
       run: |
+        python3 -m venv env
+        source env/bin/activate
         python -m pip install html5validator linkchecker
         python setup.py sdist --manifest-only
         python setup.py build
-        sudo python setup.py install
+        python setup.py install
 
     - name: html5validator
       run: |
