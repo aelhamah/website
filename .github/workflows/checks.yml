@@ -1,7 +1,6 @@
 on:
   push:
-    paths:
-      - 'docs/**'
+    
 jobs:
   Validation:
     name: p2-insta485-serverside
