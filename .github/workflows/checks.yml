@@ -18,14 +18,13 @@ jobs:
         python3 -m venv env
         source env/bin/activate
         python -m pip install html5validator linkchecker
-        python setup.py sdist --manifest-only
-        python setup.py build
-        python setup.py install
 
     - name: html5validator
       run: |
+        source env/bin/activate
         html5validator --root docs/
 
     - name: linkchecker
       run: |
+        source env/bin/activate
         linkchecker --check-extern docs/
