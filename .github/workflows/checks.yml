@@ -16,7 +16,7 @@ jobs:
 
     - name: Install Dependecies
       run: |
-        pip install html5validator linkchecker
+        python -m pip install html5validator linkchecker
 
     - name: html5validator
       run: |
