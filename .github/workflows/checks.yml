@@ -21,12 +21,7 @@ jobs:
         source env/bin/activate
         python -m pip install html5validator linkchecker
 
-    - name: html5validator
+    - name: Validator Script
       run: |
-        source env/bin/activate
-        html5validator --root docs/
-
-    - name: linkchecker
-      run: |
-        source env/bin/activate
-        linkchecker --check-extern docs/
+        sudo chmod +x bin/validators.sh
+        ./bin/validators.sh
