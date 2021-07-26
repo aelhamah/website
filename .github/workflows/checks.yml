@@ -2,6 +2,8 @@ name: Validation Tests
 
 on:
   push:
+    paths:
+      - 'docs/**'
     
 jobs:
   Validators:
