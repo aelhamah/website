@@ -1,3 +1,16 @@
-*.vscode
-*.DS_store
+.DS_Store
+
+rellax-build.js
+
+.vscode/*
+
+npm-debug.log
+debug.log
+
 env/*
+
+# Latest bootstrap version
+bootstrap.min_v4.css
+
+# demo file with new bootstrap file
+demo1.html
